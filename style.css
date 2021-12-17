@@ -1,0 +1,297 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+/* font-family: 'Bebas Neue', cursive; */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  font-family: "Barlow", sans-serif;
+  overflow-x: hidden;
+  /* background-color: black; */
+}
+#hamburger {
+  width: 20px;
+  display: none;
+}
+#menu {
+  border-top: 1.4rem solid #3ebfff;
+  border-right: 1.4rem solid white;
+  background-color: White;
+  z-index: 10;
+  width: 80vw;
+  margin: 0 10vw;
+  height: max-content;
+  position: fixed;
+  display: none;
+}
+.active {
+  display: block !important;
+}
+#menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: calc(100% + 5vw);
+  list-style: none;
+}
+#menu li {
+  color: rgb(44, 44, 44);
+  padding: 20px 10px;
+  width: fit-content;
+  margin: 0 auto;
+}
+#menu li:hover {
+  background-color: hsl(12, 93%, 51%);
+  border-radius: 32px;
+  width: 50vw;
+}
+.container{
+    background-image: url(images/desktop/header.png);
+    background-size: cover;
+    background-position: bottom;
+    height:850px;
+    text-align: center;
+}
+.container .logo{
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: 35px;
+    vertical-align: middle;
+}
+.container .flecha{
+    margin:45px auto;
+    display:inline-block;
+    width:35px;
+    height:110px;
+}
+/* .container img{
+    width:120%;
+    height:auto;
+} */
+
+.container nav{
+    display:inline-block;
+    width: calc(100%-200px);
+    text-align: right;
+}
+.mainItems{
+    list-style: none;
+}
+.mainItems li{
+    display:inline-block;
+    margin-top: 35px;
+    margin-right: 50px;
+    vertical-align: middle;
+    color: white;
+    font-size: 16px;
+}
+.container h1{
+    color: white;
+    font-size: 60px;
+    margin-top: 100px;
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+#contact{
+    font-family: 'Bebas Neue', cursive;
+    background-color: white;
+    color: black;
+    padding:20px 30px;
+    border-radius: 1.6em;
+}
+.MainPage{
+    display:grid;
+    grid-template-areas: 
+    "main1 main2"
+    "main3 main4"
+    "main5 main6";
+}
+.main1, 
+.main2,
+.main3,
+.main4,
+.main5,
+.main6,{
+    width:50vw;
+}
+.main1,
+.main4{
+    color: hsl(232,10%,55%);
+    height:600px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding:100px;
+}
+.MainPage p{
+    line-height: 1.4rem;
+    font-size: 1.2rem;
+}
+.MainPage h1{
+    font-family: 'Bebas Neue', cursive;
+    color:hsl(212,27%,19%);
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+.MainPage h6{
+    color:hsl(212,27%,19%);
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    position: relative;
+}
+.MainPage h6::after{
+    content:"";
+    width:60px;
+    cursor: pointer;
+    position:absolute;
+    left:0px;
+    top:calc(75%);
+    border-bottom:10px solid hsla(51,100%,49%,0.3);
+    border-radius:10px;
+    z-index:-1;
+}
+.main2{
+    height:600px;
+}
+.main3{
+    height:600px;
+}
+.main5{
+    background-image: url(images/desktop/graphic.png);
+    background-size: cover;
+    height:600px;
+    text-align: center;
+    color:white;
+}
+.main5 h2,
+.main6 h2{
+    font-size: 28px;
+    font-family: 'Bebas Neue', cursive;
+    font-weight:bolder;
+    padding-top: 350px;
+}
+.main5 p,
+.main6 p{
+    /*? Centrar texto automatico */
+    padding-left:140px ;
+    padding-right: 140px;
+}
+.main6{
+    background-image: url(images/desktop/photography.png);
+    background-size: cover;
+    height:600px;
+    text-align: center;
+    color:white;
+}
+.peopleSection{
+    text-align: center;
+}
+.peopleSection img{
+    border-radius: 50%;
+    width: 80px;
+    margin-bottom: 60px;
+}
+.people{
+    display:flex;
+    color: hsl(210,4%,67%);
+    padding-bottom: 12px;
+    justify-content: center;
+}
+h3{
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 3px;
+    font-weight:bolder;
+    font-size: 24px;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    color:hsl(232,10%,55%);
+    text-decoration: uppercase;
+}
+.peopleSection p{
+    color:hsl(213,9%,39%);
+    font-weight: bold;
+}
+
+/*! Aprender bien esta parte */
+.emily,
+.thomas,
+.jennie{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:30%;
+}
+span{
+    display:inline-block;
+    font-weight: bolder;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 18px;
+    padding-top: 40px;
+    color:hsl(212,27%,19%);
+}
+.prefooter{
+    display: grid;
+    height:400px;
+    padding-left: 8px;
+    padding-right: 9px;
+    /* padding-block: -8px; */
+    background-color:white;
+    grid-template-areas:"one two three four"; 
+
+}
+.one{
+    background-image: url(images/desktop/milkbottles.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.two{
+    background-image: url(images/desktop/orange.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.three{
+    background-image: url(images/desktop/cone.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.four{
+    background-image: url(images/desktop/sugarcube.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+} 
+footer{
+    height:200px;
+    background-color: #304f68;
+    text-align: center;
+    color:white
+}
+footer img{
+    width:12%;
+    position: relative;
+    /* top: -50px; */
+}
+.footer{
+    position: relative;
+    word-spacing: 50px;
+    top:20px;
+}
+.iconItems{
+    position: relative;
+    top:50px;
+}
+i{
+    font-size: 32px;
+    padding-right: 20px;
+}
+/* TODO:Responsive Movil*/
