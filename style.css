@@ -243,9 +243,6 @@ span{
 .prefooter{
     display: grid;
     height:400px;
-    /* padding-left: 8px;
-    padding-right: 9px; */
-    /* padding-block: -8px; */
     background-color:white;
     grid-template-areas:"one two three four"; 
 
