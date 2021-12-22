@@ -252,22 +252,22 @@ span{
 }
 .one{
     background-image: url(images/desktop/milkbottles.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 .two{
     background-image: url(images/desktop/orange.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 .three{
     background-image: url(images/desktop/cone.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 .four{
     background-image: url(images/desktop/sugarcube.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 } 
 footer{
