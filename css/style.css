@@ -1,0 +1,388 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* font-family: 'Bebas Neue', cursive; */
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  font-size: 16px;
+  font-family: 'Barlow', sans-serif;
+
+  /* background-color: black; */
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 5vw;
+}
+
+.logo {
+  width: 10rem;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item {
+  padding: 1rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.button {
+  font-family: 'Bebas Neue', cursive;
+  background-color: white;
+  color: black;
+  padding: 20px 30px;
+  border-radius: 1.6em;
+}
+
+.toggle {
+  display: none;
+  width: 2.5rem;
+  height: 2rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.toggle-line {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  right: 0in;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.toggle-line:nth-child(1) {
+  top: 0;
+}
+
+.toggle-line:nth-child(2) {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.toggle-line:nth-child(3) {
+  bottom: 0;
+  width: 70%;
+}
+
+.toggle.active .toggle-line:nth-child(1) {
+  top: 45%;
+  height: 2.3px;
+  transform: rotate(-45deg);
+}
+
+.toggle.active .toggle-line:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle.active .toggle-line:nth-child(3) {
+  width: 100%;
+  top: 45%;
+  height: 2.3px;
+  transform: rotate(45deg);
+}
+
+@media (max-width: 830px) {
+  .nav-list {
+    display: none;
+  }
+
+  .toggle {
+    display: block;
+  }
+}
+
+.menu {
+  border-top: 1.4rem solid #3ebfff;
+  border-right: 1.4rem solid white;
+  background-color: White;
+  z-index: 10;
+  width: 85vw;
+  margin: 0 5vw;
+  height: max-content;
+  position: fixed;
+  top: 10rem;
+  display: none;
+}
+
+.menu.active {
+  display: block;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: calc(100% + 5vw);
+}
+.menu-item {
+  color: rgb(44, 44, 44);
+  padding: 20px 10px;
+  width: fit-content;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-item:hover {
+  background-color: hsl(12, 93%, 51%);
+  border-radius: 32px;
+  width: 50vw;
+}
+
+.container {
+  background: url(../images/desktop/header.png) no-repeat center;
+  background-size: cover;
+  height: 850px;
+  text-align: center;
+}
+
+.container .flecha {
+  margin: 45px auto;
+  display: inline-block;
+  width: 35px;
+  height: 110px;
+}
+
+.container h1 {
+  color: white;
+  font-size: 60px;
+  margin-top: 100px;
+  font-family: 'Bebas Neue', cursive;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'main1 main2'
+    'main3 main4'
+    'main5 main6';
+}
+
+.main1 {
+  grid-area: main1;
+}
+
+.main2 {
+  grid-area: main2;
+}
+
+.main3 {
+  grid-area: main3;
+}
+
+.main4 {
+  grid-area: main4;
+}
+
+.main5 {
+  grid-area: main5;
+}
+
+.main6 {
+  grid-area: main6;
+}
+
+.main-text {
+  padding: 5rem 5vw;
+  color: hsl(232, 10%, 55%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+@media (max-width: 830px) {
+  .about {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'main2'
+      'main1'
+      'main3'
+      'main4'
+      'main5'
+      'main6';
+  }
+}
+
+.MainPage p {
+  line-height: 1.4rem;
+  font-size: 1.2rem;
+}
+.MainPage h1 {
+  font-family: 'Bebas Neue', cursive;
+  color: hsl(212, 27%, 19%);
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+.MainPage h6 {
+  color: hsl(212, 27%, 19%);
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: 'Bebas Neue', cursive;
+  text-transform: uppercase;
+  position: relative;
+}
+.MainPage h6::after {
+  content: '';
+  width: 60px;
+  cursor: pointer;
+  position: absolute;
+  left: 0px;
+  top: calc(75%);
+  border-bottom: 10px solid hsla(51, 100%, 49%, 0.3);
+  border-radius: 10px;
+  z-index: -1;
+}
+.main2 {
+  height: 600px;
+}
+.main3 {
+  height: 600px;
+}
+.main5 {
+  background: url(../images/desktop/graphic.png) no-repeat center;
+  background-size: cover;
+  height: 600px;
+  text-align: center;
+  color: white;
+}
+.main5 h2,
+.main6 h2 {
+  font-size: 28px;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: bolder;
+  padding-top: 350px;
+}
+.main5 p,
+.main6 p {
+  /*? Centrar texto automatico */
+  padding-left: 140px;
+  padding-right: 140px;
+}
+.main6 {
+  background: url(../images/desktop/photography.png) no-repeat center;
+  background-size: cover;
+  height: 600px;
+  text-align: center;
+  color: white;
+}
+.peopleSection {
+  text-align: center;
+}
+.peopleSection img {
+  border-radius: 50%;
+  width: 80px;
+  margin-bottom: 60px;
+}
+.people {
+  display: flex;
+  color: hsl(210, 4%, 67%);
+  padding-bottom: 12px;
+  justify-content: center;
+}
+h3 {
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 3px;
+  font-weight: bolder;
+  font-size: 24px;
+  padding-top: 120px;
+  padding-bottom: 80px;
+  color: hsl(232, 10%, 55%);
+  text-decoration: uppercase;
+}
+.peopleSection p {
+  color: hsl(213, 9%, 39%);
+  font-weight: bold;
+}
+
+/*! Aprender bien esta parte */
+.people-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+span {
+  display: inline-block;
+  font-weight: bolder;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 18px;
+  padding-top: 40px;
+  color: hsl(212, 27%, 19%);
+}
+.projects {
+  display: grid;
+  height: 400px;
+  background-color: white;
+  grid-template-areas: 'one two three four';
+}
+
+.project-one {
+  background: url(../images/desktop/milkbottles.png) no-repeat center;
+  background-size: cover;
+}
+
+.project-two {
+  background: url(../images/desktop/orange.png) no-repeat center;
+  background-size: cover;
+}
+
+.project-three {
+  background: url(../images/desktop/cone.png) no-repeat center;
+  background-size: cover;
+}
+
+.project-four {
+  background: url(../images/desktop/sugarcube.png) no-repeat center;
+  background-size: cover;
+}
+
+footer {
+  height: 200px;
+  background-color: #304f68;
+  text-align: center;
+  color: white;
+}
+footer img {
+  width: 12%;
+  position: relative;
+  padding-top: 1.2rem;
+}
+.footer {
+  position: relative;
+  word-spacing: 50px;
+  top: 20px;
+}
+.iconItems {
+  position: relative;
+  top: 50px;
+}
+i {
+  font-size: 32px;
+  padding-right: 20px;
+}
+/* TODO:Responsive Movil*/
